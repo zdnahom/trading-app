@@ -1,5 +1,10 @@
-import {configureStore} from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
+import exchangeSlice from './features/exchange/exchangeSlice';
+
 const store = configureStore({
-    
-})
-export default store
+  reducer: {
+    exchange: exchangeSlice,
+  },
+
+});
+export default store;
