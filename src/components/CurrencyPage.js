@@ -5,14 +5,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMicrophone, faGear } from '@fortawesome/free-solid-svg-icons';
 import CurrencyPair from './CurrencyPair';
 import '../styles/CurrencyPage.css';
+import { selectPair } from '../redux/features/exchange/exchangeSlice';
 
 const CurrencyPage = () => {
-  const { exchangeData, isLoading, error } = useSelector((store) => store.exchange);
+  const {
+    exchangeData, isLoading, error,
+  } = useSelector((store) => store.exchange);
   const dispatch = useDispatch();
   useEffect(() => {
     // dispatch(getExchangeData());
   }, [dispatch]);
-
+  const handleSelect = (ticker) => {
+    dispatch(selectPair(ticker));
+  };
   return (
     <section>
       <div className="header">
@@ -34,7 +39,13 @@ const CurrencyPage = () => {
       ) : (
         <ul className="currency-container">
           {
-            exchangeData.map((item) => <CurrencyPair key={item.ticker} exchangeItem={item} />)
+            exchangeData.map((item) => (
+              <CurrencyPair
+                key={item.ticker}
+                exchangeItem={item}
+                handleSelect={handleSelect}
+              />
+            ))
           }
         </ul>
       )}
