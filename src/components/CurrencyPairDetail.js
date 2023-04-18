@@ -46,10 +46,6 @@ const CurrencyPairDetail = () => {
           <span className="info-text">{clickedPair[0].high}</span>
         </div>
         <div className="currency-pair-info">
-          <span>High</span>
-          <span className="info-text">{clickedPair[0].high}</span>
-        </div>
-        <div className="currency-pair-info">
           <span>Changes</span>
           <span className="info-text">{clickedPair[0].changes.toFixed(4)}</span>
         </div>
