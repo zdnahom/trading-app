@@ -1,0 +1,29 @@
+.currency-spread{
+    font-size: 3rem;
+    font-weight: 700;
+    color:rgb(236, 236, 164)
+}
+.currency-detail-header{
+    font-size: 1rem;
+    padding: 0.4rem;
+    color: white;
+}
+.currency-pair-info-container{
+    display: grid;
+}
+.currency-pair-info{
+    background-color: #4369b2;
+    height: 80px;
+    display: flex;
+    color: #d2d2d2;
+    padding: 2% 3%;
+    justify-content: space-between;
+    align-items: center;
+}
+.currency-pair-info:nth-child(odd){
+    opacity: 0.8;
+}
+.info-text{
+    color:rgb(236, 236, 164);
+    font-size: 1.3rem;
+}

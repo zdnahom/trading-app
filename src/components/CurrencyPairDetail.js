@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMicrophone, faGear, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import '../styles/CurrencyPairDetail.css';
 
 const CurrencyPairDetail = () => {
   const { clickedPair } = useSelector((store) => store.exchange);
@@ -22,27 +23,31 @@ const CurrencyPairDetail = () => {
       <div className="currency-pair-info-container">
         <div className="currency-pair-info">
           <span>Bid</span>
-          <span className='info-text'>{clickedPair[0].bid}</span>
+          <span className="info-text">{clickedPair[0].bid}</span>
         </div>
         <div className="currency-pair-info">
           <span>Ask</span>
-          <span className='info-text'>{clickedPair[0].ask}</span>
+          <span className="info-text">{clickedPair[0].ask}</span>
         </div>
         <div className="currency-pair-info">
           <span>Open</span>
-          <span className='info-text'>{clickedPair[0].open}</span>
+          <span className="info-text">{clickedPair[0].open}</span>
         </div>
         <div className="currency-pair-info">
           <span>Low</span>
-          <span className='info-text'>{clickedPair[0].low}</span>
+          <span className="info-text">{clickedPair[0].low}</span>
         </div>
         <div className="currency-pair-info">
           <span>High</span>
-          <span className='info-text'>{clickedPair[0].high}</span>
+          <span className="info-text">{clickedPair[0].high}</span>
+        </div>
+        <div className="currency-pair-info">
+          <span>High</span>
+          <span className="info-text">{clickedPair[0].high}</span>
         </div>
         <div className="currency-pair-info">
           <span>Changes</span>
-          <span className='info-text'>{clickedPair[0].changes}</span>
+          <span className="info-text">{clickedPair[0].changes.toFixed(4)}</span>
         </div>
       </div>
     </section>
