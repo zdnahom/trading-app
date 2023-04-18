@@ -1,10 +1,11 @@
 .currency-card{
     background-color: #4369b2;
-    width: 50%;
     height: 150px;
     display: flex;
     flex-direction: column;
     color:white;
+    padding: 2% 3%;
+    
 }
 .forward-icon{
     align-self: end;
@@ -14,12 +15,13 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding: 0 3%;
+    /* padding: 0 3%; */
 }
 .currency-rate{
     display: flex;
     flex-direction: column;
     color: #d2d2d2;
+    align-items: center;
 }
 .currency-rate span{
     font-size: 1.1rem;

@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faCircleArrowRight, faClock } from '@fortawesome/free-solid-svg-icons';
 import '../styles/CurrencyPair.css';
 
 const CurrencyPair = ({ exchangeItem }) => (
   <li className="currency-card">
-    <FontAwesomeIcon icon={faArrowRight} className="forward-icon" />
+    <FontAwesomeIcon icon={faCircleArrowRight} className="forward-icon" />
     <div className="currency-card-content">
       <div className="currency-rate">
         Bid
