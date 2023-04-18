@@ -1,11 +1,10 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { getExchangeData } from '../redux/features/exchange/exchangeSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMicrophone, faGear } from '@fortawesome/free-solid-svg-icons';
+import { getExchangeData, selectPair } from '../redux/features/exchange/exchangeSlice';
 import CurrencyPair from './CurrencyPair';
 import '../styles/CurrencyPage.css';
-import { selectPair } from '../redux/features/exchange/exchangeSlice';
 
 const CurrencyPage = () => {
   const {
@@ -13,7 +12,7 @@ const CurrencyPage = () => {
   } = useSelector((store) => store.exchange);
   const dispatch = useDispatch();
   useEffect(() => {
-    // dispatch(getExchangeData());
+    dispatch(getExchangeData());
   }, [dispatch]);
   const handleSelect = (ticker) => {
     dispatch(selectPair(ticker));
