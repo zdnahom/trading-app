@@ -12,6 +12,7 @@ const CurrencyPage = () => {
   useEffect(() => {
     // dispatch(getExchangeData());
   }, [dispatch]);
+
   return (
     <section>
       <div className="header">

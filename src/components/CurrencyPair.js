@@ -1,29 +1,35 @@
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleArrowRight, faClock } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import '../styles/CurrencyPair.css';
 
-const CurrencyPair = ({ exchangeItem }) => (
-  <li className="currency-card">
-    <FontAwesomeIcon icon={faCircleArrowRight} className="forward-icon" />
-    <div className="currency-card-content">
-      <div className="currency-rate">
-        Bid
-        <span>{exchangeItem.bid}</span>
-        Ask
-        <span>{exchangeItem.ask}</span>
-      </div>
-      <div className="currency-pair-container">
-        <h3 className="currency-pair-text">{exchangeItem.ticker}</h3>
-        <span className="currency-pair-time-container">
-          <FontAwesomeIcon icon={faClock} />
-          04:54:09
-        </span>
-        <span>Currency</span>
-      </div>
-    </div>
-  </li>
-);
+const CurrencyPair = ({ exchangeItem }) => {
+  const modifiedTicker = exchangeItem.ticker.split('/').join('_');
+  return (
+    <Link style={{ textDecoration: 'none' }} key={exchangeItem.ticker} to={`/${modifiedTicker}`}>
+      <li className="currency-card">
+        <FontAwesomeIcon icon={faCircleArrowRight} className="forward-icon" />
+        <div className="currency-card-content">
+          <div className="currency-rate">
+            Bid
+            <span>{exchangeItem.bid}</span>
+            Ask
+            <span>{exchangeItem.ask}</span>
+          </div>
+          <div className="currency-pair-container">
+            <h3 className="currency-pair-text">{exchangeItem.ticker}</h3>
+            <span className="currency-pair-time-container">
+              <FontAwesomeIcon icon={faClock} />
+              04:54:09
+            </span>
+            <span>Currency</span>
+          </div>
+        </div>
+      </li>
+    </Link>
+  );
+};
 
 export default CurrencyPair;
 CurrencyPair.propTypes = {
