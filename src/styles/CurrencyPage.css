@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 2%;
+  font-size: 1.2rem;
+}
+
+.icons-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.upper-part {
+  background-color: #416096;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.total-currency-pairs {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.currency-page-header {
+  font-size: 1rem;
+  padding: 0.4rem;
+  color: white;
+}
+
+.currency-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 0.1rem;
+}
