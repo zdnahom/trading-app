@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMicrophone, faGear, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import '../styles/CurrencyPairDetail.css';
 
 const CurrencyPairDetail = () => {
@@ -8,7 +9,7 @@ const CurrencyPairDetail = () => {
   return (
     <section>
       <div className="header">
-        <FontAwesomeIcon icon={faArrowLeft} />
+        <Link to="/"><FontAwesomeIcon icon={faArrowLeft} /></Link>
         <span>{clickedPair[0].ticker}</span>
         <div className="icons-container">
           <FontAwesomeIcon icon={faMicrophone} />
