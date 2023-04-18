@@ -51,7 +51,16 @@ const initialState = {
     changes: -0.0006599999999999939,
     date: '2023-04-18 11:01:35',
   }],
-  clickedPair: null,
+  clickedPair: [{
+    ticker: 'EUR/GBP',
+    bid: '0.88198',
+    ask: '0.88198',
+    open: '0.88264',
+    low: '0.88094',
+    high: '0.88340',
+    changes: -0.0006599999999999939,
+    date: '2023-04-18 11:01:35',
+  }],
   isLoading: false,
   error: null,
 };
