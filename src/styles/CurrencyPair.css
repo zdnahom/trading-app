@@ -1,11 +1,16 @@
 .currency-card{
+    list-style: none;
+}
+.currency-card button{
     background-color: #4369b2;
+    border: none;
     height: 150px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     color:white;
     padding: 2% 3%;
-    
+    cursor: pointer;
 }
 .forward-icon{
     align-self: end;
@@ -14,8 +19,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     height: 100%;
-    /* padding: 0 3%; */
 }
 .currency-rate{
     display: flex;

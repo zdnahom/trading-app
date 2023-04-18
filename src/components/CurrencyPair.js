@@ -4,28 +4,30 @@ import { faCircleArrowRight, faClock } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import '../styles/CurrencyPair.css';
 
-const CurrencyPair = ({ exchangeItem }) => {
+const CurrencyPair = ({ exchangeItem, handleSelect }) => {
   const modifiedTicker = exchangeItem.ticker.split('/').join('_');
   return (
     <Link style={{ textDecoration: 'none' }} key={exchangeItem.ticker} to={`/${modifiedTicker}`}>
       <li className="currency-card">
-        <FontAwesomeIcon icon={faCircleArrowRight} className="forward-icon" />
-        <div className="currency-card-content">
-          <div className="currency-rate">
-            Bid
-            <span>{exchangeItem.bid}</span>
-            Ask
-            <span>{exchangeItem.ask}</span>
+        <button type="button" onClick={() => handleSelect(exchangeItem.ticker)}>
+          <FontAwesomeIcon icon={faCircleArrowRight} className="forward-icon" />
+          <div className="currency-card-content">
+            <div className="currency-rate">
+              Bid
+              <span>{exchangeItem.bid}</span>
+              Ask
+              <span>{exchangeItem.ask}</span>
+            </div>
+            <div className="currency-pair-container">
+              <h3 className="currency-pair-text">{exchangeItem.ticker}</h3>
+              <span className="currency-pair-time-container">
+                <FontAwesomeIcon icon={faClock} />
+                04:54:09
+              </span>
+              <span>Currency</span>
+            </div>
           </div>
-          <div className="currency-pair-container">
-            <h3 className="currency-pair-text">{exchangeItem.ticker}</h3>
-            <span className="currency-pair-time-container">
-              <FontAwesomeIcon icon={faClock} />
-              04:54:09
-            </span>
-            <span>Currency</span>
-          </div>
-        </div>
+        </button>
       </li>
     </Link>
   );
@@ -43,4 +45,5 @@ CurrencyPair.propTypes = {
     changes: PropTypes.number.isRequired,
     date: PropTypes.string.isRequired,
   }).isRequired,
+  handleSelect: PropTypes.func.isRequired,
 };
