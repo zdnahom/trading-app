@@ -6,6 +6,7 @@ import '../styles/CurrencyPairDetail.css';
 
 const CurrencyPairDetail = () => {
   const { clickedPair } = useSelector((store) => store.exchange);
+  const calculateSpread = () => (clickedPair[0].ask - clickedPair[0].bid) * 10000;
   return (
     <section>
       <div className="header">
@@ -18,7 +19,9 @@ const CurrencyPairDetail = () => {
       </div>
       <div className="upper-part">
         <span>Spread</span>
-        <span className="currency-spread">0</span>
+        <span className="currency-spread">
+          {calculateSpread()}
+        </span>
       </div>
       <h2 className="currency-detail-header">Currency pair Info</h2>
       <div className="currency-pair-info-container">
