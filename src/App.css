@@ -3,7 +3,8 @@
   margin: 0;
   box-sizing: border-box;
 }
-.App{
+
+.App {
   height: 100vh;
   background-color: #35548b;
 }
