@@ -9,7 +9,7 @@ const CurrencyPairDetail = () => {
   return (
     <section>
       <div className="header">
-        <Link to="/"><FontAwesomeIcon icon={faArrowLeft} /></Link>
+        <Link to="/" style={{ color: 'white' }}><FontAwesomeIcon icon={faArrowLeft} /></Link>
         <span>{clickedPair[0].ticker}</span>
         <div className="icons-container">
           <FontAwesomeIcon icon={faMicrophone} />
