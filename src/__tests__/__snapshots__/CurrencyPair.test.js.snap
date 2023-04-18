@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurrencyPair component test Render Currency pair 1`] = `
+<div>
+  <a
+    href="/USD_JPY"
+    style="text-decoration: none;"
+  >
+    <li
+      class="currency-card"
+    >
+      <button
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="svg-inline--fa fa-circle-arrow-right forward-icon"
+          data-icon="circle-arrow-right"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"
+            fill="currentColor"
+          />
+        </svg>
+        <div
+          class="currency-card-content"
+        >
+          <div
+            class="currency-rate"
+          >
+            Bid
+            <span>
+              134.060
+            </span>
+            Ask
+            <span>
+              134.060
+            </span>
+          </div>
+          <div
+            class="currency-pair-container"
+          >
+            <h3
+              class="currency-pair-text"
+            >
+              USD/JPY
+            </h3>
+            <span
+              class="currency-pair-time-container"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-clock "
+                data-icon="clock"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
+                  fill="currentColor"
+                />
+              </svg>
+              04:54:09
+            </span>
+            <span>
+              Currency
+            </span>
+          </div>
+        </div>
+      </button>
+    </li>
+  </a>
+</div>
+`;
