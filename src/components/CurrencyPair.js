@@ -1,28 +1,27 @@
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faClock } from '@fortawesome/free-solid-svg-icons';
+import '../styles/CurrencyPair.css';
 
 const CurrencyPair = ({ exchangeItem }) => (
-  <li>
-    <FontAwesomeIcon icon={faArrowRight} />
-    <div>
-      <div>
-        {'Bid : '}
+  <li className="currency-card">
+    <FontAwesomeIcon icon={faArrowRight} className="forward-icon" />
+    <div className="currency-card-content">
+      <div className="currency-rate">
+        Bid
         <span>{exchangeItem.bid}</span>
-        {'Ask : '}
+        Ask
         <span>{exchangeItem.ask}</span>
       </div>
-      <div>
-        <h3>{exchangeItem.ticker}</h3>
-        <span>
+      <div className="currency-pair-container">
+        <h3 className="currency-pair-text">{exchangeItem.ticker}</h3>
+        <span className="currency-pair-time-container">
           <FontAwesomeIcon icon={faClock} />
-          {exchangeItem.date}
-          {' '}
-          | Currency
+          04:54:09
         </span>
+        <span>Currency</span>
       </div>
     </div>
-
   </li>
 );
 

@@ -1,0 +1,45 @@
+.currency-card{
+    background-color: #4369b2;
+    width: 50%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    color:white;
+}
+.forward-icon{
+    align-self: end;
+} 
+.currency-card-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 3%;
+}
+.currency-rate{
+    display: flex;
+    flex-direction: column;
+    color: #d2d2d2;
+}
+.currency-rate span{
+    font-size: 1.1rem;
+   font-weight: 700;
+   color: white;
+   margin-bottom: 0.4rem;
+}
+.currency-pair-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+}
+.currency-pair-text{
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.currency-pair-time-container{
+    display: flex;
+    gap:0.4rem;
+    align-items: center;
+    color:rgb(169, 238, 169);
+}
