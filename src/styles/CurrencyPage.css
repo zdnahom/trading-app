@@ -1,6 +1,18 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 2%;
+    font-size: 1.2rem;
+}
+.icons-container{
+    display: flex;
+    gap: 1.5rem;
+}
 .upper-part{
+    background-color: #416096;
     height: 25vh;
-    background-color: #35548b;
     display: flex;
     flex-direction: column;
     justify-content: center;

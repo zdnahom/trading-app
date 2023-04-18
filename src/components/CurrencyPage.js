@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 // import { getExchangeData } from '../redux/features/exchange/exchangeSlice';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMicrophone, faGear } from '@fortawesome/free-solid-svg-icons';
 import CurrencyPair from './CurrencyPair';
 import '../styles/CurrencyPage.css';
 
@@ -10,9 +12,16 @@ const CurrencyPage = () => {
   useEffect(() => {
     // dispatch(getExchangeData());
   }, [dispatch]);
-  console.log(exchangeData);
   return (
     <section>
+      <div className="header">
+        <span>2022</span>
+        <span>Today&apos;s Exchange</span>
+        <div className="icons-container">
+          <FontAwesomeIcon icon={faMicrophone} />
+          <FontAwesomeIcon icon={faGear} />
+        </div>
+      </div>
       <div className="upper-part">
         <span>Total Currency pairs </span>
         <span className="total-currency-pairs">{exchangeData.length}</span>
