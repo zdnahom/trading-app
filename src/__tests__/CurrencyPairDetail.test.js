@@ -41,7 +41,7 @@ describe('CurrencyPairDetail component test', () => {
       </BrowserRouter>,
     );
     expect(container).toMatchSnapshot();
-  });it('It renders correctly', () => {
+  }); it('It renders correctly', () => {
     render(
       <BrowserRouter>
         <Provider store={store}>
@@ -52,5 +52,4 @@ describe('CurrencyPairDetail component test', () => {
     const pair = screen.getByText('USD/JPY');
     expect(pair).toBeInTheDocument();
   });
-  
 });

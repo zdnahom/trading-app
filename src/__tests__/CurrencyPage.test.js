@@ -1,4 +1,4 @@
-import { render, cleanup, screen } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import '@testing-library/jest-dom';
@@ -53,14 +53,14 @@ describe('CurrencyPage component test', () => {
     expect(container).toMatchSnapshot();
   });
   it('It renders pair lists correctly', () => {
-   const {container} = render(
+    const { container } = render(
       <BrowserRouter>
-      <Provider store={store}>
-        <CurrencyPage />
-      </Provider>
-    </BrowserRouter>
+        <Provider store={store}>
+          <CurrencyPage />
+        </Provider>
+      </BrowserRouter>,
     );
-    const totalCurrencyPair = container.getElementsByClassName('total-currency-pairs')[0]
-    expect(totalCurrencyPair.textContent).toBe("2");
+    const totalCurrencyPair = container.getElementsByClassName('total-currency-pairs')[0];
+    expect(totalCurrencyPair.textContent).toBe('2');
   });
 });

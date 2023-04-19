@@ -1,6 +1,7 @@
-import store from "../redux/store";
-describe("Redux store test", () => {
-  it("test", () => {
+import store from '../redux/store';
+
+describe('Redux store test', () => {
+  it('test', () => {
     const initialState = {
       exchange: {
         exchangeData: [],
