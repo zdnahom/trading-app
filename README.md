@@ -59,7 +59,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-No live demo for now.But it will be added in the near future.
+- [see live](https://forex-trading.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -136,14 +136,14 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project , please clone it and try it . I know you're going to love it
+If you like this project, please clone it and try it. I know you're going to love it
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-I would like  [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for the amazing design, and also I'd like to thank Microverse(staffs , mentors , reviewers) giving me the knowledge to build an amazing project like this.
+I would like to thank [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for the amazing [design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)), and I'd also want to thank Microverse(staffs , mentors , reviewers) for giving me the knowledge to build an amazing project like this.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
