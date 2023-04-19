@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CurrencyPair component test Render Currency pair 1`] = `
+exports[`CurrencyPair component test Currency pair component matches the snapshot 1`] = `
 <div>
   <a
-    href="/USD_JPY"
+    href="/EUR_USD"
     style="text-decoration: none;"
   >
     <li
@@ -35,11 +35,11 @@ exports[`CurrencyPair component test Render Currency pair 1`] = `
           >
             Bid
             <span>
-              134.060
+              1.09734
             </span>
             Ask
             <span>
-              134.060
+              1.09734
             </span>
           </div>
           <div
@@ -48,7 +48,7 @@ exports[`CurrencyPair component test Render Currency pair 1`] = `
             <h3
               class="currency-pair-text"
             >
-              USD/JPY
+              EUR/USD
             </h3>
             <span
               class="currency-pair-time-container"

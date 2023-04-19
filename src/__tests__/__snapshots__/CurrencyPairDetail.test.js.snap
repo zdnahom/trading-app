@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CurrencyPairDetail component test Render Currency pair detail 1`] = `
+exports[`CurrencyPairDetail component test component matches the snapshot 1`] = `
 <div>
   <section>
     <div

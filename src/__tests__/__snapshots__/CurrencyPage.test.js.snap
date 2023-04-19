@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CurrencyPage component test Render Currency pair lists 1`] = `
+exports[`CurrencyPage component test Component matches the snapshot 1`] = `
 <div>
   <section>
     <div

@@ -1,4 +1,4 @@
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import '@testing-library/jest-dom';
 import '@testing-library/jest-dom/extend-expect';
@@ -32,7 +32,7 @@ const store = configureStore({
 });
 
 describe('CurrencyPairDetail component test', () => {
-  it('Render Currency pair detail', () => {
+  it('component matches the snapshot', () => {
     const { container } = render(
       <BrowserRouter>
         <Provider store={store}>
@@ -41,5 +41,16 @@ describe('CurrencyPairDetail component test', () => {
       </BrowserRouter>,
     );
     expect(container).toMatchSnapshot();
+  });it('It renders correctly', () => {
+    render(
+      <BrowserRouter>
+        <Provider store={store}>
+          <CurrencyPairDetail />
+        </Provider>
+      </BrowserRouter>,
+    );
+    const pair = screen.getByText('USD/JPY');
+    expect(pair).toBeInTheDocument();
   });
+  
 });

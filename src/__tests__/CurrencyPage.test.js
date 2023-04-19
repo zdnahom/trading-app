@@ -1,4 +1,4 @@
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import '@testing-library/jest-dom';
@@ -7,6 +7,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import CurrencyPage from '../components/CurrencyPage';
 
 afterEach(cleanup);
+
 const initialState = {
   exchangeData: [
     {
@@ -41,7 +42,7 @@ const store = configureStore({
 });
 
 describe('CurrencyPage component test', () => {
-  it('Render Currency pair lists', () => {
+  it('Component matches the snapshot', () => {
     const { container } = render(
       <BrowserRouter>
         <Provider store={store}>
@@ -50,5 +51,16 @@ describe('CurrencyPage component test', () => {
       </BrowserRouter>,
     );
     expect(container).toMatchSnapshot();
+  });
+  it('It renders pair lists correctly', () => {
+   const {container} = render(
+      <BrowserRouter>
+      <Provider store={store}>
+        <CurrencyPage />
+      </Provider>
+    </BrowserRouter>
+    );
+    const totalCurrencyPair = container.getElementsByClassName('total-currency-pairs')[0]
+    expect(totalCurrencyPair.textContent).toBe("2");
   });
 });
