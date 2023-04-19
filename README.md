@@ -65,7 +65,7 @@
 
 
 ##  Project Walkthrough <a name="project-walkthrough"></a>
-- please wait
+- [check video](https://www.loom.com/share/2353456d25b6407ba0ee8aa987374ec9)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
