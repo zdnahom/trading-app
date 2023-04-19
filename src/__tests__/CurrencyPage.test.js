@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import "@testing-library/jest-dom";
@@ -6,6 +6,7 @@ import "@testing-library/jest-dom/extend-expect";
 import { configureStore } from "@reduxjs/toolkit";
 import CurrencyPage from "../components/CurrencyPage";
 
+afterEach(cleanup)
 const initialState = {
     exchangeData: [
       {
@@ -37,10 +38,6 @@ const initialState = {
     reducer: {
       exchange: (state = initialState) => state,
     },
-  });
-
-beforeEach(() => {
-    jest.resetModules();
   });
 
 describe("CurrencyPage component test", () => {
